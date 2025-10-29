@@ -54,25 +54,25 @@ const Contact = () => {
     {
       name: 'GitHub',
       icon: '💻',
-      url: 'https://github.com',
+      url: 'https://github.com/aldoganza',
       color: '#333'
     },
     {
       name: 'LinkedIn',
       icon: '💼',
-      url: 'https://linkedin.com',
+      url: 'https://www.linkedin.com/in/ganza-ngirowonsanga-aldo-511630356/',
       color: '#0077b5'
     },
     {
       name: 'Twitter',
       icon: '🐦',
-      url: 'https://twitter.com',
+      url: 'https://x.com/ganza_aldo',
       color: '#1da1f2'
     },
     {
       name: 'Email',
       icon: '📧',
-      url: 'mailto:aldo.ganza@example.com',
+      url: 'mailto:aldongiruwonsanga@gmail.com',
       color: '#ea4335'
     }
   ];
@@ -99,7 +99,7 @@ const Contact = () => {
                 <span className="detail-icon">📧</span>
                 <div>
                   <h4>Email</h4>
-                  <a href="mailto:aldo.ganza@example.com">aldo.ganza@example.com</a>
+                  <a href="mailto:aldongiruwonsanga@gmail.com">aldongiruwonsanga@gmail.com</a>
                 </div>
               </div>
               <div className="detail-item">

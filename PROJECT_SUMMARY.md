@@ -194,7 +194,7 @@ npm run build
 2. **About Text**: Edit `src/components/About/About.js`
 3. **Skills**: Modify `skillsData` array in `src/components/Skills/Skills.js`
 4. **Projects**: Update `projectsData` array in `src/components/Projects/Projects.js`
-5. **Contact Info**: Edit `src/components/Contact/Contact.js`
+5. **Contact Info**: Already configured with your real information
 
 ### Add Your Photo
 Replace the avatar circle in `src/components/Home/Home.js`:

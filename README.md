@@ -50,6 +50,7 @@ npm run build
 ## Author
 
 **Aldo Ganza**
-- GitHub: [Your GitHub]
-- LinkedIn: [Your LinkedIn]
-- Email: [Your Email]
+- GitHub: [github.com/aldoganza](https://github.com/aldoganza)
+- LinkedIn: [Ganza Ngirowonsanga Aldo](https://www.linkedin.com/in/ganza-ngirowonsanga-aldo-511630356/)
+- Twitter: [@ganza_aldo](https://x.com/ganza_aldo)
+- Email: aldongiruwonsanga@gmail.com
