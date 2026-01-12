@@ -28,9 +28,7 @@ const Home = () => {
         <div className={`home-content ${isVisible ? 'visible' : ''}`}>
           <div className="home-image-wrapper">
             <div className="image-placeholder">
-              <div className="avatar-circle">
-                <span className="avatar-text">AG</span>
-              </div>
+              <img src="/profile.png" alt="Aldo Ganza" className="profile-image" />
             </div>
             <div className="image-decoration"></div>
           </div>
