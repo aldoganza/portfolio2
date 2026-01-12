@@ -3,9 +3,43 @@ import './Home.css';
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [nameText, setNameText] = useState('');
+  const [titleText, setTitleText] = useState('');
+  const [showNameCursor, setShowNameCursor] = useState(true);
+  const [showTitleCursor, setShowTitleCursor] = useState(false);
+
+  const fullName = 'Aldo Ganza';
+  const fullTitle = 'Full Stack Developer';
 
   useEffect(() => {
     setIsVisible(true);
+
+    // Typewriter effect for name
+    let nameIndex = 0;
+    const nameInterval = setInterval(() => {
+      if (nameIndex < fullName.length) {
+        setNameText(fullName.slice(0, nameIndex + 1));
+        nameIndex++;
+      } else {
+        clearInterval(nameInterval);
+        setShowNameCursor(false);
+        setShowTitleCursor(true);
+
+        // Start title typing after name is complete
+        let titleIndex = 0;
+        const titleInterval = setInterval(() => {
+          if (titleIndex < fullTitle.length) {
+            setTitleText(fullTitle.slice(0, titleIndex + 1));
+            titleIndex++;
+          } else {
+            clearInterval(titleInterval);
+            setTimeout(() => setShowTitleCursor(false), 500);
+          }
+        }, 80);
+      }
+    }, 100);
+
+    return () => clearInterval(nameInterval);
   }, []);
 
   const scrollToContact = () => {
@@ -35,9 +69,15 @@ const Home = () => {
 
           <div className="home-text">
             <h1 className="home-greeting">
-              Hi, I'm <span className="gradient-text">Aldo Ganza</span>
+              Hi, I'm <span className="gradient-text">
+                {nameText}
+                {showNameCursor && <span className="cursor">|</span>}
+              </span>
             </h1>
-            <h2 className="home-title">Full Stack Developer</h2>
+            <h2 className="home-title">
+              {titleText}
+              {showTitleCursor && <span className="cursor">|</span>}
+            </h2>
             <p className="home-description">
               I craft beautiful, functional, and user-friendly digital experiences.
               Passionate about building innovative solutions with modern technologies.
