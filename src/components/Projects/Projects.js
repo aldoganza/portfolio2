@@ -9,63 +9,36 @@ const Projects = () => {
   const projectsData = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React frontend and Express backend, featuring user authentication, product management, and payment integration.',
-      technologies: ['React', 'Express', 'MongoDB'],
+      title: 'AMOURA - Romance Stories Platform',
+      description: 'A modern web platform for African romance writers and readers. Features bilingual content (English & Kinyarwanda), episode scheduling, writer levels, offline reading, and PWA support. Built with React, Vite, Firebase, and Tailwind CSS.',
+      technologies: ['React', 'Vite', 'Firebase', 'Tailwind CSS'],
       category: 'web',
-      github: 'https://github.com',
-      demo: 'https://demo.com',
-      image: '🛒'
+      github: 'https://github.com/aldoganza',
+      demo: 'https://lovestories-6914f.web.app',
+      image: '💕',
+      status: 'live'
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative task management application built with Vue.js and Firebase, allowing teams to organize and track their work efficiently.',
-      technologies: ['Vue', 'Firebase', 'Vuex'],
+      title: 'Portfolio Generator',
+      description: 'An automated portfolio builder that generates beautiful, professional portfolios without writing any code. Simply fill out your information (skills, projects, experience) and the system automatically generates a fully responsive portfolio website ready to deploy.',
+      technologies: ['React', 'Node.js', 'AI', 'Templates'],
       category: 'web',
-      github: 'https://github.com',
-      demo: 'https://demo.com',
-      image: '✅'
+      github: 'https://github.com/aldoganza',
+      demo: '#',
+      image: '🎨',
+      status: 'coming-soon'
     },
     {
       id: 3,
-      title: 'Weather Forecast App',
-      description: 'A beautiful mobile weather application built with Flutter, providing real-time weather data and forecasts with an intuitive UI.',
-      technologies: ['Flutter', 'Dart', 'API'],
-      category: 'mobile',
-      github: 'https://github.com',
-      demo: 'https://demo.com',
-      image: '🌤️'
-    },
-    {
-      id: 4,
-      title: 'Portfolio Generator',
-      description: 'An automated portfolio website generator using Python, allowing developers to create beautiful portfolios from JSON configuration.',
-      technologies: ['Python', 'Flask', 'Jinja2'],
-      category: 'web',
-      github: 'https://github.com',
-      demo: 'https://demo.com',
-      image: '🎨'
-    },
-    {
-      id: 5,
       title: 'Fitness Tracker',
-      description: 'A cross-platform fitness tracking app built with Flutter, featuring workout logging, progress tracking, and health statistics.',
-      technologies: ['Flutter', 'Dart', 'SQLite'],
+      description: 'A comprehensive fitness tracking mobile application built with Flutter. Track your workouts, monitor progress, log nutrition, set fitness goals, and visualize your health statistics. Features offline support, custom workout plans, and detailed analytics.',
+      technologies: ['Flutter', 'Dart', 'SQLite', 'Firebase'],
       category: 'mobile',
-      github: 'https://github.com',
-      demo: 'https://demo.com',
-      image: '💪'
-    },
-    {
-      id: 6,
-      title: '2D Platformer Game',
-      description: 'An engaging 2D platformer game developed with Godot Engine and GDScript, featuring custom physics and level design.',
-      technologies: ['Godot', 'GDScript'],
-      category: 'game',
-      github: 'https://github.com',
-      demo: 'https://demo.com',
-      image: '🎮'
+      github: 'https://github.com/aldoganza',
+      demo: '#',
+      image: '💪',
+      status: 'coming-soon'
     }
   ];
 
@@ -101,32 +74,7 @@ const Projects = () => {
           My Projects
         </h2>
 
-        <div className={`filter-buttons ${isVisible ? 'visible' : ''}`}>
-          <button 
-            className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
-            onClick={() => setFilter('all')}
-          >
-            All Projects
-          </button>
-          <button 
-            className={`filter-btn ${filter === 'web' ? 'active' : ''}`}
-            onClick={() => setFilter('web')}
-          >
-            Web
-          </button>
-          <button 
-            className={`filter-btn ${filter === 'mobile' ? 'active' : ''}`}
-            onClick={() => setFilter('mobile')}
-          >
-            Mobile
-          </button>
-          <button 
-            className={`filter-btn ${filter === 'game' ? 'active' : ''}`}
-            onClick={() => setFilter('game')}
-          >
-            Games
-          </button>
-        </div>
+        {/* Filter buttons removed - showing single featured project */}
 
         <div className={`projects-grid ${isVisible ? 'visible' : ''}`}>
           {filteredProjects.map((project, index) => (
@@ -137,23 +85,32 @@ const Projects = () => {
             >
               <div className="project-image">
                 <div className="project-emoji">{project.image}</div>
+                {project.status === 'coming-soon' && (
+                  <div className="coming-soon-badge">Coming Soon</div>
+                )}
                 <div className="project-overlay">
-                  <a 
-                    href={project.github} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="project-link"
-                  >
-                    GitHub
-                  </a>
-                  <a 
-                    href={project.demo} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="project-link"
-                  >
-                    Live Demo
-                  </a>
+                  {project.status === 'live' ? (
+                    <>
+                      <a 
+                        href={project.github} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="project-link"
+                      >
+                        GitHub
+                      </a>
+                      <a 
+                        href={project.demo} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="project-link"
+                      >
+                        Live Demo
+                      </a>
+                    </>
+                  ) : (
+                    <span className="project-link disabled">In Development</span>
+                  )}
                 </div>
               </div>
               <div className="project-content">

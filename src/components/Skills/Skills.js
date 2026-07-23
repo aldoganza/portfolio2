@@ -6,18 +6,18 @@ const Skills = () => {
   const sectionRef = useRef(null);
 
   const skillsData = [
-    { name: 'React', level: 90, category: 'Frontend' },
-    { name: 'Vue.js', level: 85, category: 'Frontend' },
-    { name: 'JavaScript/ES6+', level: 92, category: 'Frontend' },
-    { name: 'HTML & CSS', level: 95, category: 'Frontend' },
-    { name: 'Python', level: 88, category: 'Backend' },
-    { name: 'Express.js', level: 85, category: 'Backend' },
-    { name: 'Node.js', level: 87, category: 'Backend' },
-    { name: 'REST APIs', level: 90, category: 'Backend' },
-    { name: 'Flutter', level: 82, category: 'Mobile' },
-    { name: 'Dart', level: 80, category: 'Mobile' },
-    { name: 'Godot Engine', level: 75, category: 'Game Dev' },
-    { name: 'GDScript', level: 78, category: 'Game Dev' }
+    { name: 'React', level: 80, category: 'Frontend' },
+    { name: 'Vue.js', level: 65, category: 'Frontend' },
+    { name: 'JavaScript/ES6+', level: 75, category: 'Frontend' },
+    { name: 'HTML & CSS', level: 90, category: 'Frontend' },
+    { name: 'Python', level: 55, category: 'Backend' },
+    { name: 'Express.js', level: 80, category: 'Backend' },
+    { name: 'Node.js', level: 75, category: 'Backend' },
+    { name: 'REST APIs', level: 70, category: 'Backend' },
+    { name: 'Flutter', level: 60, category: 'Mobile' },
+    { name: 'Dart', level: 60, category: 'Mobile' },
+    { name: 'Godot Engine', level: 65, category: 'Game Dev' },
+    { name: 'GDScript', level: 55, category: 'Game Dev' }
   ];
 
   useEffect(() => {

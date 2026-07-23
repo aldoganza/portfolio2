@@ -1,0 +1,22 @@
+[debug] [2026-07-23T22:05:26.267Z] ----------------------------------------------------------------------
+[debug] [2026-07-23T22:05:26.271Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Lenovo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js projects:create aldo-portfolio --display-name Aldo Ganza Portfolio
+[debug] [2026-07-23T22:05:26.272Z] CLI Version:   15.6.0
+[debug] [2026-07-23T22:05:26.272Z] Platform:      win32
+[debug] [2026-07-23T22:05:26.273Z] Node Version:  v22.14.0
+[debug] [2026-07-23T22:05:26.273Z] Time:          Fri Jul 24 2026 00:05:26 GMT+0200 (Central European Summer Time)
+[debug] [2026-07-23T22:05:26.273Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-07-23T22:05:26.616Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-07-23T22:05:26.617Z] > authorizing via signed-in user (nayiturikiolive999@gmail.com)
+[debug] [2026-07-23T22:05:26.626Z] Checked if tokens are valid: true, expires at: 1784847814257
+[debug] [2026-07-23T22:05:26.626Z] Checked if tokens are valid: true, expires at: 1784847814257
+[debug] [2026-07-23T22:05:26.628Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2026-07-23T22:05:26.629Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"aldo-portfolio","name":"Aldo Ganza Portfolio"}
+[debug] [2026-07-23T22:05:28.343Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2026-07-23T22:05:28.344Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2026-07-23T22:05:28.789Z] FirebaseError: Request to https://cloudresourcemanager.googleapis.com/v1/projects had HTTP Error: 409, Requested entity already exists
+    at responseToError (C:\Users\Lenovo\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:53:12)
+    at RetryOperation._fn (C:\Users\Lenovo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:330:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID aldo-portfolio. Please try again with a unique project ID.
