@@ -3,7 +3,6 @@ import './Projects.css';
 
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [filter, setFilter] = useState('all');
   const sectionRef = useRef(null);
 
   const projectsData = [
@@ -22,22 +21,22 @@ const Projects = () => {
       id: 2,
       title: 'Portfolio Generator',
       description: 'An automated portfolio builder that generates beautiful, professional portfolios without writing any code. Simply fill out your information (skills, projects, experience) and the system automatically generates a fully responsive portfolio website ready to deploy.',
-      technologies: ['React', 'Node.js', 'AI', 'Templates'],
+      technologies: ['Python', 'React', 'Flask', 'Templates'],
       category: 'web',
-      github: 'https://github.com/aldoganza',
+      github: 'https://github.com/aldoganza/Portfolio-Generator',
       demo: '#',
       image: '🎨',
       status: 'coming-soon'
     },
     {
       id: 3,
-      title: 'Fitness Tracker',
-      description: 'A comprehensive fitness tracking mobile application built with Flutter. Track your workouts, monitor progress, log nutrition, set fitness goals, and visualize your health statistics. Features offline support, custom workout plans, and detailed analytics.',
-      technologies: ['Flutter', 'Dart', 'SQLite', 'Firebase'],
-      category: 'mobile',
-      github: 'https://github.com/aldoganza',
+      title: 'ClassSocial',
+      description: 'A social media platform designed for students to connect, collaborate, and share educational content. Features include real-time chat, study notes sharing, group creation for class discussions, and Instagram-style posts and stories. Built to enhance student collaboration and academic success.',
+      technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
+      category: 'web',
+      github: 'https://github.com/aldoganza/class_social',
       demo: '#',
-      image: '💪',
+      image: '📚',
       status: 'coming-soon'
     }
   ];
@@ -63,9 +62,7 @@ const Projects = () => {
     };
   }, []);
 
-  const filteredProjects = filter === 'all' 
-    ? projectsData 
-    : projectsData.filter(project => project.category === filter);
+  const filteredProjects = projectsData;
 
   return (
     <section id="projects" className="projects-section" ref={sectionRef}>
@@ -109,7 +106,17 @@ const Projects = () => {
                       </a>
                     </>
                   ) : (
-                    <span className="project-link disabled">In Development</span>
+                    <>
+                      <a 
+                        href={project.github} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="project-link"
+                      >
+                        GitHub
+                      </a>
+                      <span className="project-link disabled">Coming Soon</span>
+                    </>
                   )}
                 </div>
               </div>
